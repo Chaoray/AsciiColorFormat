@@ -1,3 +1,8 @@
+Usage:
+```cpp
+#include "ConsoleColorFormat.h"
+```
+
 Example:
 ```cpp
 std::cout << FG_RED << "Hello World!\n" << RESET_COLOR;
