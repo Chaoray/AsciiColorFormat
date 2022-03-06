@@ -6,9 +6,13 @@ Usage:
 
 Example:
 ```cpp
-std::cout << FG_GREEN << "Hello World!\n" << RESET_COLOR;
-std::cout << BG_CYAN << "My name is Jeff!\n" << RESET_COLOR;
+std::cout << FG_RED << "Hello World!\n" << RESET_COLOR;
+std::cout << FG_GREEN << "My name is Jeff!\n" << RESET_COLOR;
 ```
+
 Output:  
-<font color="green">Hello World!</font><br>
-<font style="background-color: #0093B0">My name is Jeff!</font>
+```diff
+- Hello World!
++ My name is Jeff!
+```
+`(Please ignore the - and +)`
