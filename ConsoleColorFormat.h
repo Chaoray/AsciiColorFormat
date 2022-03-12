@@ -32,7 +32,7 @@
 #define FG_MAGENTA ESCAPE "35m"
 #define FG_CYAN ESCAPE "36m"
 #define FG_WHITE ESCAPE "37m"
-#define FG_DEFAULT ESCAPE "39m"
+#define FG_RESET ESCAPE "39m"
 #define FG_SET_RGB(r, g, b) ESCAPE "38;2;" r ";" g ";" b
 
 #define BG_BLACK ESCAPE "40m"
@@ -43,7 +43,7 @@
 #define BG_MAGENTA ESCAPE "45m"
 #define BG_CYAN ESCAPE "46m"
 #define BG_WHITE ESCAPE "47m"
-#define BG_DEFAULT ESCAPE "49m"
+#define BG_RESET ESCAPE "49m"
 #define BG_SET_RGB(r, g, b) ESCAPE "48;2;" r ";" g ";" b
 
 #endif
