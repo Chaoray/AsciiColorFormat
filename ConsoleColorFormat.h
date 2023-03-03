@@ -46,4 +46,22 @@
 #define BG_RESET ESCAPE "49m"
 #define BG_SET_RGB(r, g, b) ESCAPE "48;2;" r ";" g ";" b
 
+#include <windows.h>
+void EnableColor() {
+    DWORD mode;
+    HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+    if (handle == INVALID_HANDLE_VALUE) return;
+    GetConsoleMode(handle, &mode);
+    SetConsoleMode(handle, mode | 0x0001 | 0x0004);
+}
+
+void DisableColor() {
+    DWORD mode;
+    HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+    if (handle == INVALID_HANDLE_VALUE) return;
+    GetConsoleMode(handle, &mode);
+    SetConsoleMode(handle, mode & ~(0x0004));
+} 
+
+#endif
 #endif
